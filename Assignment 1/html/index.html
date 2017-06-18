@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5.1 - Front End Web Development Fundamentals</title>
+	<style>
+	
+body 
+{
+    background-color: linen;
+}
+h1 
+{
+    color: maroon;
+} 
+
+</style>
+</head>
+<body>
+	<h1>Tutorial to find the area of the circle!</h1><br>
+	<!--A form has been created that will accept the radius value and on click of the button would return the area of the circle-->
+	 <form name=form1>
+        Enter the radius of circle:
+       <input type="text" name="txtRadius" size=10>
+       <br><br>
+       <input type="button" value="Calculate" onClick='GetAreaOfCircle();'>  
+    </form>
+<script type="text/javascript">
+	function GetAreaOfCircle()
+	{
+
+var radius =document.form1.txtRadius.value;
+console.log(radius);
+if (radius == "") 
+{
+	alert("please enter a radius value!");
+}
+else if (isNaN(radius)) {alert("Please enter only numeric value!")}
+else
+{
+	var a=2*3.14159*radius;
+		alert("Area of the circle is : "+a);
+
+}
+	}
+</script>
+</body>
+</html>
